@@ -1,0 +1,27 @@
+.flex{
+    display: flex;
+}
+
+.col{
+    flex-direction: column;
+}
+
+.center-v{
+    align-items: center;
+}
+
+.center-h{
+    justify-content: center;
+}
+
+.gap-1vh{
+    gap: 1vh;
+}
+
+.gap-1vw{
+    gap: 1vw;
+}
+
+.login-txt-input{
+    width: 60vw;
+}
