@@ -1,3 +1,17 @@
+body, h1, h2{
+    border: unset;
+    margin: unset;
+    
+}
+
+/* h1, label{
+    color: white;
+} */
+
+div > label{
+    font-size: 14px;
+}
+
 .flex{
     display: flex;
 }
@@ -14,6 +28,10 @@
     justify-content: center;
 }
 
+.center-t{
+    text-align: center;
+}
+
 .gap-1vh{
     gap: 1vh;
 }
@@ -22,6 +40,234 @@
     gap: 1vw;
 }
 
+.padding-top{
+    padding-top: 2vh;
+}
+
+.padding-top-s{
+    padding-top: 0.5vh;
+}
+
+.margin-top{
+    margin-top: 2vh;
+}
+.margin-sides{
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.padding-sides{
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
 .login-txt-input{
     width: 60vw;
 }
+
+.page-container{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: grey; */
+}
+
+.page-container::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/gradient-blur.avif');
+    background-size: contain;
+    background-position: top;
+    filter: blur(60px);  
+    opacity: 0.5;       
+    z-index: -1;
+}
+
+.header{
+    /* background-color: red; */
+    height: 15vh;
+    justify-content: flex-end;
+    z-index: 999;
+}
+
+.main{
+    /* background-color: blue; */
+    height: 100vh;
+    z-index: 998;
+    overflow: scroll;
+}
+
+.main-header{
+    position: relative;
+}
+
+.graph, .add-goal, .entry{
+    height: 15vh;
+    justify-content: space-between;
+    border: 0.25vh solid #7f7f7f12;
+    border-radius: 15px;
+}
+
+.donut-container{
+    align-items: center;
+}
+
+.donut-chart {
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    background: conic-gradient(
+      #4caf50 0% 40%,     /* 40% slice */
+      #8e9da98a 40% 100%    /* 30% slice */
+    );
+    position: relative;
+}
+
+/* The hollow center */
+.donut-chart::after {
+    content: "";
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+    background: rgba(255, 255, 255, 0.952); /* or match page background */
+    border-radius: 50%;
+}
+
+.add-goal > div, .btn-add{
+    width: 100%;
+}
+
+.img-preview-main{
+    width: 80%;
+    justify-content: space-around;
+}
+
+.entry > div{
+    width: 100%;
+}
+
+.entry-date{
+    width: 20%;
+}
+
+.img-preview-main > img{
+    height: 10vh;
+}
+
+.footer{
+    border-top: 0.25vh solid #7f7f7f12;
+    border-radius: 5px;
+    z-index: 998;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.tab{
+    /* padding: 0; */
+    height: 6vh;
+    width: 19%;
+    background-color: rgb(255 255 255 / 10%);
+    border: none;
+
+}
+
+.icon{
+    
+    width: auto;
+    height: 4.5vh;
+    max-height: 4.5vh;
+    background-color: rgb(255 255 255 / 0%);
+}
+
+.home-btns{
+    position: relative;
+    left: 60vw;
+}
+
+
+.tile-list{
+    flex-wrap: wrap;
+    margin-bottom: 8vh;
+}
+
+.tile{
+    width: 41vw;
+    height: 41vw;
+    justify-content: space-around;
+}
+
+.workout-title{
+    width: 100%;
+}
+
+.workout-info{
+    font-size: 8px;
+}
+
+.workout-svg{
+    width: 20vw;
+    height: auto;
+    max-height: 20vw;
+}
+
+.add-workout{
+    justify-content: center;
+}
+
+.form-container {
+    position: fixed;
+    bottom: -100%; /* start off-screen */
+    left: 10%;
+    width: 80%;
+    background: white;
+    transition: bottom 0.4s ease-in-out;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    /* margin-right: 10%; */
+    z-index: 999;
+  }
+  
+  .form-container.active {
+    bottom: 35vh; /* slide into view */
+  }
+  
+
+  #exit, #favorite{
+    /* left: 0; */
+    /* z-index: 999; */
+  }
+
+  .button-bar{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hide-star{
+    display: none;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .logged-msg {
+    position: fixed;
+    bottom: -100%; /* start off-screen */
+    left: 10%;
+    width: 80%;
+    background: white;
+    transition: bottom 0.4s ease-in-out;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    /* margin-right: 10%; */
+    z-index: 999;
+  }
+  
+  .logged-msg.active {
+    bottom: 42vh; /* slide into view */
+  }
